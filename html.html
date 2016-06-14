@@ -1,0 +1,190 @@
+<html>
+    <header>
+        <script src="angular.min.js"></script>
+        <link rel="stylesheet" href="style/css.css">
+        <script src="jquery.js"></script>
+    </header>
+    <body ng-app="myApp">
+        
+        <header ng-controller="myController">
+        </header>
+        <body>
+          
+            
+<!--
+            <section>
+                <div class="oval_menu">
+                    <span id="items"></span>
+                    <span id="items"></span>
+                    <span id="items"></span>
+                    <span id="items"></span>
+                </div>
+            </section>
+-->
+            <section>
+                <div class="sticky_menu hide">
+                    <img>
+                    <ul>
+                        <li>enot</li>
+                        <li>enot</li>
+                        <li>enot</li>
+                        <li>enot</li>
+                        <li>enot</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <div class="background_image">
+                    <img src="amg.jpg">
+                </div>
+            </section>
+            
+            
+            <section>
+                <div class="header" ng-controller="myController">
+                    <div class="header_top">
+                        <p class="left_side"> this is a very long text
+                        </p>
+                        <p class="right_side" ng-model="name">{{name}}</p>
+                        <ul class="menu">
+                            <li ng-repeat="list in menu_list">{{list}}</li>
+                        </ul>
+                    </div>
+                    <ul class="circle_menu">
+                        <li ng-repeat="item in image_menu">
+                            <p>{{item.text}}</p>
+                            <img>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+               
+
+            <section>
+                <div class="about_company" ng-controller="myController">
+                    <span>Title</span>
+                    <ul>
+                        <li ng-repeat="item in obout_company_list">
+                            <img>
+                            <P>{{item.text}}ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</P>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <div class="slideshow">
+                    <div class="prev" id="prev"></div>
+                    <img src="slide1.jpg1" id="img_above" class="img1">
+                    <img src="slide2.jpg1" id="img_below" class="img2">
+                    <span id="slideshow_text">THis is text dddddddddddddddddddddddddddddddddddd</span>
+                    <div class="next" id="next"></div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="form"  ng-controller="formController">
+                    <span ng-model="title">Title{{title}}</span>
+                    <form>
+                        <input type="text" value="Name" id="edit_name">
+                        <input type="text" value="Phone" id="edit_phone">
+                        <button type="submit">Button</button>
+                    </form>
+                </div>
+            </section>
+            
+            <section>
+                <div class="sales" ng-controller="sales"> 
+                    <span class="sales_title">Title</span>
+                    <ul>
+                        <li ng-repeat="item in sales">
+                            <div class="sales_image">
+                                <img src={{item.picture}}>
+                            </div>
+                            <span ng-model="name">title{{name}}</span>
+                            <p>This is Leonid this is spartaddddddddddddddddddddddddd</p>
+                            <div class="calculate_price">
+                                <span>cost</span>
+                                <input type="text" value="1">
+                                <span>title</span>                            
+                            </div>
+                            <button>Buy</button>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <div class="gallery" ng-controller="gallery">
+                    <span>Title</span>
+                    <ul id="gallery">
+                        <li ng-repeat="item in images">
+                            <img src={{item.picture}} id="img">
+                            <span>description</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="modal_window">
+                    <div class="form_close" id="modal_close">Close</div>
+                    <div class="prev" id="g_prev"></div>
+                    <img src="" id="g_big_image">
+                    <div class="next" id="g_next"></div>
+                </div>
+            </section>
+            
+            
+            <section>
+                <div class="whim">
+                    <span>title</span>
+                    <ul>
+                        <li>
+                            <div class="above">
+                                <img>
+                            </div>
+                            <div class="below">
+                                <p>this is textdfdfdfdfdfffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            
+<!--
+            <section>
+                <div class="cards">
+                    <div class="cards_container">
+                        <div><img src="slide4.jpg"></div>
+                        <div><img src="card.jpg"></div>
+                        <div><img src="sales2.jpg"></div>
+                        <div><img src="slide3.jpg"></div>
+                        <div><img src="card.jpg"></div>
+                    </div>
+                </div>
+            </section>
+-->
+            
+            
+        <footer>
+            <div class="footer">
+                <ul class="touch_with_us">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </footer>    
+            
+            
+        </body>
+        <footer></footer>
+        
+        <script type="text/javascript" src="js.js"></script>
+        <script type="text/javascript" src="ang.js"></script>
+    </body>
+</html>
