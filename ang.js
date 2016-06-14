@@ -40,8 +40,8 @@ function sales($scope){
 
 function gallery($scope){
     $scope.images = [
-        {picture: 'slide1.jpg'},
-        {picture: 'slide2.jpg'},
+        {picture: 'slide1.jpg1'},
+        {picture: 'slide2.jpg1'},
         {picture: 'slide3.jpg1'},
         {picture: 'slide4.jpg1'},
         {picture: 'slide1.jpg1'},
