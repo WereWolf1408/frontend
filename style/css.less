@@ -122,6 +122,9 @@
 body, html{
     margin: 0;
     padding: 0;
+    background-image: url("../amg.jpg");
+    background-attachment: fixed;
+    background-size: contain;
 }
 
 .sticky_menu{
@@ -169,16 +172,6 @@ body, html{
                 animation-duration: 4s;
             }
         }
-    }
-}
-
-.background_image{
-    position: fixed;
-    z-index: -1;
-    .resize();
-    img{
-        
-        .resize(@height: auto);
     }
 }
 
