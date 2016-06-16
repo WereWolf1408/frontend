@@ -19,18 +19,17 @@ $('#img_above').data('inforamtion', "img_above");
 $('#slideshow_text').data('information', "this is show text");
 /*Липкий header*/
 
-var header_height = $('.header_top').height();
-console.log(header_height);
+var circle_height = $('.circle_menu').height();
+console.log(circle_height);
 
 $(window).scroll(function() {
     
-    if ($(this).scrollTop() >= header_height){
+    if ($(this).scrollTop() >= circle_height){
         console.log('if');
-        $('.sticky_menu').css({opacity: 1})
-    } else {
-        $('.sticky_menu').css({opacity: 0});
+        $('.sticky_menu').css({"height": '8%'});
+    } else{
+        $('.sticky_menu').css({"height": '0%'});
     }
-    
 });
 //-----------------sticky header end------------------------------------------
 function find(mass, value){

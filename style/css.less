@@ -125,15 +125,15 @@ body, html{
 }
 
 .sticky_menu{
-    transition: all 1s 0s;
-//    display: none;
+    transition: all 0.8s 0s;
+    overflow: hidden;
     display: inline-block;
     background: rgba(0,0,0, 1);
     position: fixed;
     width: 100%;
     z-index: 1100;
     text-align: center;
-    height: 8%;
+    height: 0%;
     img{
         .border(black);
         display: inline-block;
@@ -265,7 +265,7 @@ body, html{
 
 .about_company{
 //    background: rgba(255,255,255, 1);
-    background: gray;
+    background: silver;
     text-align: center;
     span{
         display: inline-block;
@@ -281,7 +281,7 @@ body, html{
             display: inline-block;
             margin-bottom: 1.5em;
             margin-right: 1em;
-            .border(white);
+            border: 1px solid white;
             .resize(@width: 20%; @height: auto);
             min-width: 250px;
             img{
@@ -411,7 +411,7 @@ body, html{
     .resize(@height: 50%; @width: 45%);
     background: rgba(105,105,105, 0.6);
     border-radius: 5%;
-    .border(black);
+    border: 1px solid rgba(105,105,105, 0.6);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0, 1);
     form{
     }
@@ -420,7 +420,7 @@ body, html{
         display: block;
         margin: auto;
         margin-top: 2em;
-        .resize(@width: 90%, @height: 15%);
+        .resize(@width: 90%, @height: 18%);
         border-radius: 10px;
         outline: none;
         border: none;
@@ -428,7 +428,7 @@ body, html{
         transition: all 1s 0s;
         color: white;
         &:active{
-            .resize(@width: 70%, @height: 15%);
+            .resize(@width: 70%, @height: 18%);
             transition: all 0s 0s;
         }
     }
@@ -466,7 +466,7 @@ body, html{
 
 .sales{
 //    background: rgba(255,255,255, 1);
-    background: gray;
+    background: silver;
     display: inline-block;
     .resize(@height: auto, @width: 100%);
     .sales_title{
@@ -484,7 +484,7 @@ body, html{
             display: inline-block;
             margin: 0em 1em 1em 0em;
             .resize(@height:auto; @width: 26%);
-            .border(white);
+            border: 1px solid white;
             min-width: 200px;
             overflow: hidden;
             &:hover{
@@ -545,7 +545,7 @@ body, html{
 
 
 .gallery{
-    background: gray;
+    background: silver;
     display: inline-block;
     .resize(@height: auto, @width: 100%);
     span{
@@ -663,7 +663,7 @@ body, html{
             overflow: hidden;
             position: relative;
             display: inline-block;
-            border: 1px solid black;
+            border: 1px solid white;
             min-width: 270px;
             .resize(@height: 50%, @width: 20%);
             &:before{
@@ -778,6 +778,7 @@ body, html{
     background: black;
     .resize(@height: 40%);
     box-shadow:inset 0px -80px 200px -120px rgba(255,255,255, 1);
+    text-align: center;
     &:hover {
         .touch_with_us{
             li {
@@ -798,18 +799,19 @@ body, html{
             animation-fill-mode: forwards;
             .resize(100px, 100px);
             background: white;
+            margin-right: 1em;
             display: inline-block;
             border-radius: 100%;
             position: relative;
             top: 100px;
             &:nth-child(2){
-                animation-delay: 0.1s;
+//                animation-delay: 0.1s;
             }
             &:nth-child(3){
-                animation-delay: 0.3s;
+//                animation-delay: 0.3s;
             }
             &:nth-child(4){
-                animation-delay: 0.5s;
+//                animation-delay: 0.5s;
             }
         }
     }
