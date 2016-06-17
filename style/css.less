@@ -3,8 +3,6 @@
 @hight: ~"(min-width: 1366px)";
 @ball_count: 4;
 
-
-
 @media @small{
     @import "small.less";
 }
@@ -257,37 +255,32 @@ body, html{
 
 
 .about_company{
-//    background: rgba(255,255,255, 1);
-    background: silver;
-    text-align: center;
+    background: gray;
     span{
-        display: inline-block;
-        font-size: 2em;
-        margin: 0.5em;
+        display: block;
+        .border(white);
+        text-align: center;
+        font-size: 1.5em;
     }
     ul{
+        .border(white);
+//        width: 50%;
         list-style: none;
-        text-align: center;
-        margin: 0;
-        
+        padding: 0;
+        display: inline-block;
         li{
-            display: inline-block;
-            margin-bottom: 1.5em;
-            margin-right: 1em;
-            border: 1px solid white;
-            .resize(@width: 20%; @height: auto);
-            min-width: 250px;
-            img{
-                .resize(100px, 100px);
-                margin: 0.5em;
-            }
-            p{
-                padding: 1em;
-                word-break: break-all;
-                font-size: 1.2em;
-                margin: 0;
-            }
+            word-break: break-all;
+            padding: 0.3em;
+            padding-left: 2em;
+            .border(white);
         }
+    }
+    .img{
+        display: inline-block;
+        .border(white);
+        .resize(@height: 50%; @width: 45%);
+        vertical-align: top;
+        margin: 1em;
     }
 }
 
@@ -418,11 +411,11 @@ body, html{
         outline: none;
         border: none;
         background: rgba(117,235,14, 1);
-        transition: all 1s 0s;
         color: white;
+        box-shadow: 6px 6px 10px 0px rgba(0,0,0, 1);
         &:active{
-            .resize(@width: 70%, @height: 18%);
-            transition: all 0s 0s;
+            box-shadow:inset 0px 0px 10px 4px rgba(0,0,0, 1);
+//            box-shadow: none;
         }
     }
     input{
@@ -436,6 +429,7 @@ body, html{
         border-radius: 10px;
         font-size: 1.5em;
         padding: 1em;
+        box-shadow: 6px 6px 10px 0px rgba(0,0,0, 1);
         &:first-child{
         }
     }
@@ -457,6 +451,13 @@ body, html{
 }
 
 
+.button_group_on{
+    box-shadow:inset 0px 3px 10px -3px rgba(0,0,0, 1);
+}
+.button_group_off{
+    box-shadow: 1.5px 1.5px 2px 0px rgba(0,0,0, 1);
+}
+
 .sales{
 //    background: rgba(255,255,255, 1);
     background: silver;
@@ -466,7 +467,25 @@ body, html{
         font-size: 2em;
         display: block;
         text-align: center;
-        margin: 1em;
+        margin: 0.5em 1em 0.5em 1em;
+    }
+    .button_group{
+        margin-bottom: 0.5em;
+        text-align: center;
+        button{
+            height: 5%;
+            width: 5%;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            margin: 0;
+//            box-shadow: 1.5px 1.5px 2px 0px rgba(0,0,0, 1);
+            &:hover{
+            }
+            &:active{
+//                box-shadow:inset 0px 3px 10px -3px rgba(0,0,0, 1);
+            }
+        }
     }
     ul{
         list-style: none;
@@ -775,36 +794,32 @@ body, html{
     &:hover {
         .touch_with_us{
             li {
-                animation-name: ball_up;
-                animation-duration: 1s;
-                animation-fill-mode: forwards;
+                top: 0;
             }
         }
     }
     .touch_with_us{
-        .border(white);
         list-style: none;
         padding: 0;
         text-align: center;
+        overflow: hidden;
         li{
-            animation-name: ball_out;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
+            transition: all 0.3s 0s;
             .resize(100px, 100px);
             background: white;
             margin-right: 1em;
             display: inline-block;
             border-radius: 100%;
             position: relative;
-            top: 100px;
+            top: 110px;
             &:nth-child(2){
-//                animation-delay: 0.1s;
+                transition-delay: 0.1s;
             }
             &:nth-child(3){
-//                animation-delay: 0.3s;
+                transition-delay: 0.2s;
             }
             &:nth-child(4){
-//                animation-delay: 0.5s;
+                transition-delay: 0.3s;
             }
         }
     }
