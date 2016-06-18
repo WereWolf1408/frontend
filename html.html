@@ -3,6 +3,7 @@
         <script src="angular.min.js"></script>
         <link rel="stylesheet" href="style/css.css">
         <script src="jquery.js"></script>
+        <link rel="stylesheet" href="timer/flipclock.css">
     </header>
     <body ng-app="myApp">
         
@@ -64,7 +65,6 @@
                         <li>4</li>
                     </ul>
                     <div class="img">
-                        <img src="slide3.jpg">
                     </div>
                 </div>
             </section>
@@ -114,7 +114,6 @@
                     </ul>
                 </div>
             </section>
-            
             <section>
                 <div class="gallery" ng-controller="gallery">
                     <span>Title</span>
@@ -134,6 +133,12 @@
                 </div>
             </section>
             
+            <section>
+                <div class="timer_place">
+                    <div class="my_timer"></div>
+                    <span class="under_timer_value">Leonid was here</span>
+                </div>
+            </section>
             
             <section>
                 <div class="whim">
@@ -182,7 +187,9 @@
         </body>
         <footer></footer>
         
+        <script src="timer/flipclock.js"></script>
         <script type="text/javascript" src="js.js"></script>
         <script type="text/javascript" src="ang.js"></script>
+        <script src="flipclock.js"></script>
     </body>
 </html>

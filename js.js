@@ -44,6 +44,20 @@ function find(mass, value){
 
 
 
+
+//timer ------------------------------
+
+var clock = $('.my_timer').FlipClock({
+    countdown: true
+});
+
+clock.setTime(36000);
+clock.start();
+
+//timer end -----------------------------
+
+
+
 //slide_show start 
 function get_slide(mass, position, value){
     if (position == 'next'){
