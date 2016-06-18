@@ -2,6 +2,7 @@
 @medium: ~"(max-width: 1366px) and (min-width: 1024px)";
 @hight: ~"(min-width: 1366px)";
 @ball_count: 4;
+@import "timer.css";
 
 @media @small{
     @import "small.less";
@@ -255,32 +256,38 @@ body, html{
 
 
 .about_company{
-    background: gray;
+    background: silver;
     span{
         display: block;
-        .border(white);
         text-align: center;
         font-size: 1.5em;
     }
     ul{
-        .border(white);
-//        width: 50%;
         list-style: none;
         padding: 0;
         display: inline-block;
         li{
+            margin-left: 1em;
+            padding: 0.5em;
             word-break: break-all;
-            padding: 0.3em;
-            padding-left: 2em;
-            .border(white);
+            border: 1px solid white;
+            border-left: 0px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom: 0px;
+            &:last-child{
+                border-bottom: 1px solid white;
+            }
         }
     }
     .img{
         display: inline-block;
-        .border(white);
         .resize(@height: 50%; @width: 45%);
         vertical-align: top;
         margin: 1em;
+        img{
+            .resize();
+        }
     }
 }
 
