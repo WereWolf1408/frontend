@@ -123,7 +123,7 @@ body, html{
     padding: 0;
     background-image: url("../background.jpg");
     background-attachment: fixed;
-    background-size: contain;
+    background-size: 100% 100%;
 }
 
 .sticky_menu{
@@ -256,8 +256,9 @@ body, html{
 
 
 .about_company{
-    background: silver;
+    background: rgba(0,0,0, 1);
     span{
+        color: white;
         display: block;
         text-align: center;
         font-size: 1.5em;
@@ -267,6 +268,7 @@ body, html{
         padding: 0;
         display: inline-block;
         li{
+            color: white;
             margin-left: 1em;
             margin-bottom: 0.3em;
             padding: 0.5em;
@@ -281,7 +283,7 @@ body, html{
     }
     .img{
         background: url("../slide3.jpg");
-        background-size: contain;
+        background-size: 100% 100%;
         display: inline-block;
         .resize(@height: 50%; @width: 45%);
         vertical-align: top;
@@ -399,44 +401,41 @@ body, html{
 }
 
 .form{
+    width: 45%;
+    display: block;
     margin: 2em auto;
-    .resize(@height: 50%; @width: 45%);
     background: rgba(105,105,105, 0.6);
     border-radius: 5%;
     border: 1px solid rgba(105,105,105, 0.6);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0, 1);
-    form{
-    }
     button{
-        font-size: 1.5em;
+        font-size: 2em;
         display: block;
         margin: auto;
-        margin-top: 2em;
-        .resize(@width: 90%, @height: 18%);
+        .resize(@width: 90%, @height: 15%);
         border-radius: 10px;
         outline: none;
         border: none;
         background: rgba(117,235,14, 1);
         color: white;
         box-shadow: 6px 6px 10px 0px rgba(0,0,0, 1);
+        margin-bottom: 1em;
         &:active{
             box-shadow:inset 0px 0px 10px 4px rgba(0,0,0, 1);
         }
     }
     input{
+        width: 90%;
         display: block;
-        .resize(@width: 90%, @height: 15%);
         margin: 1em auto;
         background: rgba(0,0,0, 0.5);
         outline: none;
         border: none;
         color: white;
-        border-radius: 10px;
+        border-radius: 15px;
         font-size: 1.5em;
         padding: 1em;
         box-shadow: 6px 6px 10px 0px rgba(0,0,0, 1);
-        &:first-child{
-        }
     }
     span{
         text-align: center;
@@ -447,14 +446,6 @@ body, html{
         margin-bottom: 1em;
     }
 }
-
-
-@keyframes example {
-    0% {box-shadow: 0px 0px 10px 4px rgba(255,255,255, 1);}
-    50% {box-shadow: 0px 0px 10px 4px rgba(0,0,0, 1);}
-    100% {box-shadow: 0px 0px 10px 4px rgba(255,255,255, 1);}
-}
-
 
 .button_group_on{
     box-shadow:inset 0px 3px 10px -3px rgba(0,0,0, 1);
@@ -505,9 +496,10 @@ body, html{
             min-width: 200px;
             overflow: hidden;
             &:hover{
-                animation-name: example;
-                animation-duration: 8s;
-                animation-iteration-count: infinite;
+                //animation-name: example;
+                //animation-duration: 8s;
+                //animation-iteration-count: infinite;
+                box-shadow: 0px 0px 10px 4px rgba(0,0,0, 1);
             }
             .sales_image{
                 .resize(@height: 30%);
@@ -710,20 +702,16 @@ body, html{
                 }
             }
             .above{
+                background: url("../small.jpg");
+                background-size: 100% 100%;
                 z-index: 10;
                 .resize(@height: 45%);
                 transition: all 0.2s 0s;
-                background: gray;
                 position: relative;
                 &:before{
                     display: inline-block;
                     height: 50%;
                     content: "";
-                }
-                img{
-                    display: inline-block;
-                    vertical-align: middle;
-                    .resize(110px, 110px);
                 }
             }
             .below{
