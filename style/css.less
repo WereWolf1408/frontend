@@ -182,8 +182,9 @@ body, html{
         list-style: none;
         padding: 0;
         text-align: center;
+        perspective: 1200px;
         li{
-            .border(white);
+            background-color: rgba(0,0,0, 0.5);
             display: inline-block;
             margin: 1em;
             border-radius: 100%;
@@ -194,6 +195,14 @@ body, html{
             p{
                 padding: 1em;
                 font-size: 2em;
+                text-shadow:0px 0px 0 rgb(223,223,223),
+                1px 1px 0 rgb(202,202,202),
+                2px 2px 0 rgb(180,180,180),
+                3px 3px 0 rgb(158,158,158),
+                4px 4px 0 rgb(136,136,136),
+                5px 5px 4px rgba(0,0,0,0.6),
+                5px 5px 1px rgba(0,0,0,0.5),
+                0px 0px 4px rgba(0,0,0,.2);
             }
             img{
                 .border(white);
