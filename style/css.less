@@ -126,55 +126,6 @@ body, html{
     background-size: 100% 100%;
 }
 
-.sticky_menu{
-    transition: all 0.8s 0s;
-    overflow: hidden;
-    display: inline-block;
-    background: rgba(0,0,0, 1);
-    position: fixed;
-    width: 100%;
-    z-index: 1100;
-    text-align: center;
-    height: 0%;
-    img{
-        .border(black);
-        display: inline-block;
-        width: 10px;
-        .resize(@height: 100%, @width: 10%);
-        margin-right: 10%;
-        position: absolute;
-        left: 10%;
-    }
-    ul{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: inline-block;
-        height: 100%;
-        vertical-align: top;
-        &:before{
-            display: inline-block;
-            height: 50%;
-            content: "";
-        }
-        li{
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 1.3em;
-            margin: 0.5em;
-            color: white;
-            cursor: pointer;
-            &:hover{
-                .transform(scale(1.2));
-                animation-name: text-animate;
-                animation-iteration-count: infinite;
-                animation-duration: 4s;
-            }
-        }
-    }
-}
-
-
 .header{
     color: white;
     position: relative;
@@ -841,5 +792,55 @@ body, html{
         color: white;
     }
     .my_timer{
+    }
+}
+
+.ball_menu{
+    display: inline-block;
+    height: 500px;
+    width: 500px;
+    background: gray;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10000;
+    border-radius: 100%;
+    &:hover{
+        transition: all 2s 0s;
+        .transform(rotate(360deg));
+        .menu{
+        }
+    }
+    .menu{
+        height: 100px;
+        width: 100px;
+        background: black;
+        display: inline-block;
+        //position: absolute;
+        border-radius: 100%;
+        //margin: auto;
+        //top: 0px;
+        //bottom: 0px;
+        //right: 0px;
+        //left: 0px;
+        //&:nth-child(1){
+        //    top: 1em;
+        //    bottom: auto;
+        //}
+        //&:nth-child(2){
+        //    left: 1em;
+        //    right: auto;
+        //}
+        //&:nth-child(3){
+        //    right: 1em;
+        //    left: auto;
+        //}
+        //&:nth-child(4){
+        //    bottom: 1em;
+        //    top: auto;
+        //}
     }
 }

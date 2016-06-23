@@ -22,15 +22,6 @@ $('#slideshow_text').data('information', "this is show text");
 var circle_height = $('.circle_menu').height();
 console.log(circle_height);
 
-$(window).scroll(function() {
-    
-    if ($(this).scrollTop() >= circle_height){
-        console.log('if');
-        $('.sticky_menu').css({"height": '8%'});
-    } else{
-        $('.sticky_menu').css({"height": '0%'});
-    }
-});
 //-----------------sticky header end------------------------------------------
 function find(mass, value){
     console.log(mass.length);
@@ -47,10 +38,7 @@ function find(mass, value){
 
 //timer ------------------------------
 
-var clock = $('.my_timer').FlipClock({
-    countdown: true
-});
-
+var clock = $('.my_timer').FlipClock();
 clock.setTime(36000);
 clock.start();
 
