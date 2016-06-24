@@ -795,52 +795,66 @@ body, html{
     }
 }
 
-.ball_menu{
-    display: inline-block;
-    height: 500px;
-    width: 500px;
-    background: gray;
-    position: fixed;
+@circle_size: 500px;
+@item_size: 100px;
+@center: (@circle_size/2) - (@item_size/2);
+
+.small_ball_menu{
+    height: @item_size;
+    width: @item_size;
+    top: 50px;
+    left: 50px;
+}
+.hight_ball_menu{
+    height: @circle_size;
+    width: @circle_size;
     right: 0;
     left: 0;
     top: 0;
     bottom: 0;
+}
+
+.ball_menu{
+    transition: all 1s 0s;
+    overflow: hidden;
+    display: inline-block;
+    background: gray;
+    position: fixed;
     margin: auto;
     z-index: 10000;
     border-radius: 100%;
-    &:hover{
-        transition: all 2s 0s;
-        .transform(rotate(360deg));
-        .menu{
-        }
-    }
     .menu{
-        height: 100px;
-        width: 100px;
+        transition: all 1s 0s;
+        height: @item_size;
+        width: @item_size;
         background: black;
         display: inline-block;
-        //position: absolute;
         border-radius: 100%;
-        //margin: auto;
-        //top: 0px;
-        //bottom: 0px;
-        //right: 0px;
-        //left: 0px;
-        //&:nth-child(1){
-        //    top: 1em;
-        //    bottom: auto;
-        //}
-        //&:nth-child(2){
-        //    left: 1em;
-        //    right: auto;
-        //}
-        //&:nth-child(3){
-        //    right: 1em;
-        //    left: auto;
-        //}
-        //&:nth-child(4){
-        //    bottom: 1em;
-        //    top: auto;
-        //}
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        &:nth-child(1){
+            top: 1em;
+            bottom: auto;
+        }
+        &:nth-child(2){
+            left: 1em;
+            right: auto;
+        }
+        &:nth-child(3){
+            right: 1em;
+            left: auto;
+        }
+        &:nth-child(4){
+            top: auto;
+            bottom: 1em;
+        }
+        &:nth-child(5){
+            background-color: rgba(0,0,0, 0.5);
+        }
     }
+
 }

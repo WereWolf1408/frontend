@@ -177,3 +177,18 @@ $('#g_prev').on('click', function(){
     g_change_image('prev');
 })
 //gallery end ------------------------------
+
+
+// circle menu ----------------------------------------------
+
+$('#menu_close').on('click', function(){
+    $('.ball_menu').css({
+        'height': '0',
+        'width': '0',
+        'transform': 'rotate(360deg)'
+    })
+})
+
+
+// end circle menu -------------------------------------
+
