@@ -42,9 +42,6 @@ function find(mass, value){
     return -1;
 }
 
-
-
-
 //timer ------------------------------
 
 var clock = $('.my_timer').FlipClock({
@@ -221,7 +218,7 @@ $.fn.set_size = function(size, top, left){
         'left': left
     })
 };
-function menu_init(){
+function circle_menu_init(){
     $('.ball_menu').addClass('small');
     $('.ball_menu').set_size(small_size);
     $('.menu').css({
@@ -229,9 +226,7 @@ function menu_init(){
         'width': small_size,
     });
 }
-menu_init();
-
-
+circle_menu_init();
 
 // end circle menu -------------------------------------
 
