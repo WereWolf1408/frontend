@@ -1,3 +1,12 @@
+
+//circle menu parammeters
+var small_size = screen.height*11/100;
+var big_size = screen.height*50/100;
+var top_big = screen.height/2 - big_size/2;
+var left_big = screen.width/2 -big_size/2;
+var top_small = '3%';
+var left_small = '3%';
+
 var slide_number = 0;
 var layer = true;
 var current_gallery_image = 0;
@@ -38,7 +47,10 @@ function find(mass, value){
 
 //timer ------------------------------
 
-var clock = $('.my_timer').FlipClock();
+var clock = $('.my_timer').FlipClock({
+    // true - count down; false count up
+    countdown: true
+});
 clock.setTime(36000);
 clock.start();
 
@@ -181,13 +193,36 @@ $('#g_prev').on('click', function(){
 
 // circle menu ----------------------------------------------
 
-$('#menu_close').on('click', function(){
-    $('.ball_menu').css({
-        'height': '0',
-        'width': '0',
-        'transform': 'rotate(360deg)'
+$("#menu_close").on('click', function(){
+    if ($('.ball_menu').hasClass('small')){
+        $('.ball_menu').removeClass('small');
+        $('.ball_menu').addClass('big');
+        $('.ball_menu').set_size(big_size, top_big, left_big);
+    } else{
+        $('.ball_menu').removeClass('big');
+        $('.ball_menu').addClass('small');
+        $('.ball_menu').set_size(small_size, top_small, left_small);
+    }
+});
+
+$.fn.set_size = function(size, top, left){
+    $(this).css({
+        'height': size,
+        'width': size,
+        'top': top,
+        'left': left
     })
-})
+};
+function menu_init(){
+    $('.ball_menu').addClass('small');
+    $('.ball_menu').set_size(small_size);
+    $('.menu').css({
+        'height': small_size,
+        'width': small_size,
+    });
+}
+menu_init();
+
 
 
 // end circle menu -------------------------------------

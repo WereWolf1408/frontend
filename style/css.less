@@ -121,7 +121,7 @@
 body, html{
     margin: 0;
     padding: 0;
-    background-image: url("../background.jpg");
+    background-image: url("../sales3.jpg");
     background-attachment: fixed;
     background-size: 100% 100%;
 }
@@ -181,7 +181,7 @@ body, html{
         font-size: 2.5em;
         float: right;
     }
-    .menu{
+    .header_menu{
         margin: 0;
         padding: 0;
         list-style: none;
@@ -213,7 +213,6 @@ body, html{
         }
     }
 }
-
 
 .about_company{
     background: rgba(0,0,0, 1);
@@ -795,26 +794,9 @@ body, html{
     }
 }
 
-@circle_size: 500px;
-@item_size: 100px;
-@center: (@circle_size/2) - (@item_size/2);
-
-.small_ball_menu{
-    height: @item_size;
-    width: @item_size;
-    top: 50px;
-    left: 50px;
-}
-.hight_ball_menu{
-    height: @circle_size;
-    width: @circle_size;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-}
-
 .ball_menu{
+    top: 3%;
+    left: 3%;
     transition: all 1s 0s;
     overflow: hidden;
     display: inline-block;
@@ -823,10 +805,9 @@ body, html{
     margin: auto;
     z-index: 10000;
     border-radius: 100%;
+    .transform(rotate(360deg));
     .menu{
         transition: all 1s 0s;
-        height: @item_size;
-        width: @item_size;
         background: black;
         display: inline-block;
         border-radius: 100%;
