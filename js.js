@@ -193,15 +193,23 @@ $('#g_prev').on('click', function(){
 
 // circle menu ----------------------------------------------
 
+
+function open_menu(){
+    $('.ball_menu').removeClass('small');
+    $('.ball_menu').addClass('big');
+    $('.ball_menu').set_size(big_size, top_big, left_big);
+}
+function close_menu(){
+    $('.ball_menu').removeClass('big');
+    $('.ball_menu').addClass('small');
+    $('.ball_menu').set_size(small_size, top_small, left_small);
+}
+
 $("#menu_close").on('click', function(){
     if ($('.ball_menu').hasClass('small')){
-        $('.ball_menu').removeClass('small');
-        $('.ball_menu').addClass('big');
-        $('.ball_menu').set_size(big_size, top_big, left_big);
+       open_menu();
     } else{
-        $('.ball_menu').removeClass('big');
-        $('.ball_menu').addClass('small');
-        $('.ball_menu').set_size(small_size, top_small, left_small);
+        close_menu();
     }
 });
 
