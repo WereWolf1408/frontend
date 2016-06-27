@@ -107,6 +107,10 @@
             <section>
                 <div class="gallery" ng-controller="gallery">
                     <span>Title</span>
+                    <div class="button_group">
+                        <button class="button_group_off">Button</button>
+                        <button class="button_group_on">Button</button>
+                    </div>
                     <ul id="gallery">
                         <li ng-repeat="item in images">
                             <img src={{item.picture}} id="img">

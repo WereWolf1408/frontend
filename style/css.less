@@ -1,7 +1,7 @@
 @small: ~"(max-width: 1024px)";
 @medium: ~"(max-width: 1366px) and (min-width: 1024px)";
 @hight: ~"(min-width: 1366px)";
-@import "timer.css";
+//@import "timer.css";
 
 @media @small{
     @import "small.less";
@@ -14,7 +14,7 @@
 }
 
 @default_color: white;
-@section_color: black;
+@section_color: gray ;
 
 
 
@@ -125,7 +125,7 @@
 body, html{
     margin: 0;
     padding: 0;
-    background-image: url("../sales3.jpg");
+    background-image: url("../slide3.jpg");
     background-attachment: fixed;
     background-size: 100% 100%;
 }
@@ -410,12 +410,23 @@ body, html{
 }
 
 .button_group_on{
-    box-shadow:inset 0px 3px 10px -3px rgba(0,0,0, 1);
+    box-shadow:inset 0px 3px 10px -2px rgba(0,0,0, 1);
 }
 .button_group_off{
     box-shadow: 1.5px 1.5px 2px 0px rgba(0,0,0, 1);
 }
-
+.button_group{
+    margin-bottom: 0.5em;
+    text-align: center;
+    button{
+        height: 5%;
+        width: 5%;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        margin: 0;
+    }
+}
 .sales{
     background: @section_color;
     display: inline-block;
@@ -426,18 +437,6 @@ body, html{
         text-align: center;
         margin: 0.5em 1em 0.5em 1em;
         color: white;
-    }
-    .button_group{
-        margin-bottom: 0.5em;
-        text-align: center;
-        button{
-            height: 5%;
-            width: 5%;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-            margin: 0;
-        }
     }
     ul{
         list-style: none;
@@ -609,9 +608,10 @@ body, html{
 
 
 .whim{
-    background-color: blanchedalmond;
+    background-color: @section_color;
     .resize(@height: 70%);
     ul{
+        margin: 0;
         .resize();
         list-style: none;
         padding: 0;
@@ -623,8 +623,10 @@ body, html{
             display: inline-block;
         }
         li{
+            background: url("../small.jpg");
+            background-size: 100% 100%;
             .resize(@height: 70%, @width: 15%);
-            .border();
+            z-index: 499;
             display: inline-block;
             vertical-align: middle;
             .transform(rotateY(30deg));
@@ -637,6 +639,7 @@ body, html{
                 .transform(rotateY(0));
                 .transform(scale(1.2));
                 margin-right: 0em;
+                z-index: 500;
             }
             &:last-child{
                 transition: transform 0.5s 0s;
@@ -686,7 +689,7 @@ body, html{
 
 .timer_place{
     background: url("../timer.jpg");
-    .resize(@height: 50%);
+    .resize(@height: 80%);
     text-align: center;
     &:before{
         content: "";
